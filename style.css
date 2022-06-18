@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=swap');
+:root{
+    font-size: 1em;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 16px;
+    font-family: 'Josefin Sans', sans-serif;
+    background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+}
+.main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+}
+.section1{
+    grid-column: 1/2;
+    grid-row: auto;
+    background-image: url(./images/bg-pattern-desktop.svg);
+}
+.section2{
+    grid-column: 2/3;
+    grid-row: auto;
+}
+.heroImage{
+    display: block;
+    height: 100vh;
+    width: 80%;
+    margin-left: auto;
+}
+.container{
+    width: 60%;
+    margin: 0 auto;
+}
+.logoImage{
+    margin: 3em auto 6em;
+}
+.textSect h1{
+    text-transform: uppercase;
+    font-size: 4rem;
+    letter-spacing: 0.15em;
+    font-weight: 300;
+    color: hsl(0, 36%, 70%);
+}
+.textSect b{
+    color: hsl(0, 6%, 24%);
+}
+.textSect p{
+    margin-top: 1.5em;
+    color: hsl(0, 36%, 70%);
+    font-size: 1rem;
+    line-height: 1.5em;
+}
+.email{
+    width: 100%;
+    flex-grow: 1;
+    padding: 1.6em 3em 1.6em 3em;
+    margin: 0 -20% 0.7em 0;
+    border-radius: 2em;
+    border: 1px solid hsl(0, 36%, 70%);
+}
+.sendBtn{
+    font-size: 1.5rem;
+    color: white;
+    padding: 0.7em 1.5em;
+    background: linear-gradient( 135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    border-radius: 1em;
+    box-shadow: 0px 10px 10px hsl(0, 36%, 70%,.35);
+    border: none;
+    cursor: pointer;
+}
+.errImage{
+    align-self: center;
+    padding: 0 1em 0.5em 0;
+    display: none;
+}
+.email::placeholder{
+    color: hsl(0, 36%, 70%);
+    font-size: 0.9rem;
+    opacity: 0.6;
+}
+.inputSection{
+    margin-top: 2em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.err{
+    display: none;
+    color: hsl(0, 93%, 68%);
+    margin-left: 1.7em;
+    font-size: 0.8rem;
+}
+.heroImageMobile{
+    display: none;
+}
+.logoImageMobile{
+    display: none;
+}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+@media (max-width:768px) {
+    .main{
+        grid-template-columns: auto;
+        grid-template-rows: auto 1fr;
+    }
+    .section1{
+        grid-column: auto;
+        grid-row: 2/3;
+    }
+    .section2{
+        grid-column: auto;
+        grid-row: 1/2;
+    }
+    .container{
+        width: 90%;
+        text-align: center;
+        margin-top: 3em;
+    }
+    .heroImage{
+        display: none;
+    }
+    .heroImageMobile{
+        display: block;
+        width: 100%;
+        margin: 0;
+    }
+    .logoImage{
+        display: none;
+    }
+    .logoImageMobile{
+        display: block;
+        margin: 1em 0 1em 2em;
+        width: 8em;
+    }
+    .sendBtn{
+        bottom: -12.5em;
+        left: 18em;
+    }
+    .email{
+        margin-bottom: 1em;
+    }
+    .err{
+        margin-left: 0;
+        font-size: 0.8rem;
+    }
+    .errImage{
+        padding: 0 1em 1em 0;
+    }
+    .container2{
+        margin-bottom: 3em;
+    }
+    .sendBtn{
+        padding: 0.7em 1.1em;
+    }
+    .email{
+        margin: 0 -15% 0.7em 0;
+    }
+}
+@media (max-width:600px){
+    .email{
+        margin: 0 -13% 0.7em 0;
+    }
+}
